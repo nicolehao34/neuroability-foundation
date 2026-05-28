@@ -30,7 +30,7 @@ export function Landing() {
           <a href="#get-involved" className="text-sm font-semibold text-teal-700 hover:text-teal-900 transition-colors px-5 py-2.5 rounded-full border border-teal-200 hover:border-teal-300">
             Get Involved
           </a>
-          <a href="#donate" className="text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 transition-colors px-5 py-2.5 rounded-full">
+          <a href="#/donate" className="text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 transition-colors px-5 py-2.5 rounded-full">
             Donate
           </a>
         </div>
@@ -62,7 +62,7 @@ export function Landing() {
           initial="hidden" animate="visible" custom={3} variants={fade}
           className="flex flex-col sm:flex-row gap-3 justify-center"
         >
-          <a href="#donate" className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white px-7 py-3.5 rounded-full font-semibold text-sm transition-colors">
+          <a href="#/donate" className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white px-7 py-3.5 rounded-full font-semibold text-sm transition-colors">
             Donate <ArrowRight size={16} />
           </a>
           <a href="#get-involved" className="inline-flex items-center gap-2 border border-slate-200 hover:border-slate-300 text-slate-700 px-7 py-3.5 rounded-full font-semibold text-sm transition-colors">
@@ -171,7 +171,7 @@ export function Landing() {
                 title: "Donate",
                 desc: "Fund our research program, open-source development, and the direct costs of connecting students with mentors and assistive technology.",
                 cta: "Donate to NeuroAbility",
-                href: "#donate",
+                href: "#/donate",
                 primary: true
               },
               {
@@ -218,9 +218,6 @@ export function Landing() {
           </div>
         </div>
       </section>
-
-      {/* Donate anchor */}
-      <div id="donate" />
 
       {/* Footer */}
       <footer className="border-t border-slate-100 px-8 py-10">

@@ -25,17 +25,17 @@ export function Donate() {
     <div className="min-h-screen bg-white font-['DM_Sans',sans-serif] text-slate-900 selection:bg-teal-100 selection:text-teal-900">
       <nav className="border-b border-slate-100 px-8 py-5 flex justify-between items-center sticky top-0 bg-white z-30">
         <div className="flex items-center gap-2.5">
-          <img src="/__mockup/images/neuroability-logo.png" alt="NeuroAbility logo" className="w-9 h-9 rounded-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/neuroability-logo.jpg`} alt="NeuroAbility logo" className="w-9 h-9 rounded-full object-cover" />
           <span className="font-['Playfair_Display',serif] text-lg font-semibold text-teal-800 tracking-tight">NeuroAbility Foundation</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-500">
-          <a href="/" className="hover:text-slate-900 transition-colors">Our Work</a>
-          <a href="/" className="hover:text-slate-900 transition-colors">Resources</a>
-          <a href="/" className="hover:text-slate-900 transition-colors">Research</a>
+          <a href="#/" className="hover:text-slate-900 transition-colors">Our Work</a>
+          <a href="#/" className="hover:text-slate-900 transition-colors">Resources</a>
+          <a href="#/" className="hover:text-slate-900 transition-colors">Research</a>
         </div>
         <div className="flex items-center gap-3">
-          <a href="/" className="text-sm font-semibold text-teal-700 hover:text-teal-900 transition-colors px-5 py-2.5 rounded-full border border-teal-200 hover:border-teal-300">Get Involved</a>
-          <a href="/" className="text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 transition-colors px-5 py-2.5 rounded-full">Donate</a>
+          <a href="#/" className="text-sm font-semibold text-teal-700 hover:text-teal-900 transition-colors px-5 py-2.5 rounded-full border border-teal-200 hover:border-teal-300">Get Involved</a>
+          <a href="#/donate" className="text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 transition-colors px-5 py-2.5 rounded-full">Donate</a>
         </div>
       </nav>
 
@@ -201,7 +201,7 @@ export function Donate() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
           <div>
             <div className="flex items-center gap-2.5">
-              <img src="/__mockup/images/neuroability-logo.png" alt="NeuroAbility logo" className="w-7 h-7 rounded-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}images/neuroability-logo.jpg`} alt="NeuroAbility logo" className="w-7 h-7 rounded-full object-cover" />
               <span className="font-['Playfair_Display',serif] font-semibold text-teal-800">NeuroAbility Foundation</span>
             </div>
             <p className="text-slate-400 text-xs mt-1">A registered 501(c)(3) nonprofit.</p>
@@ -209,21 +209,21 @@ export function Donate() {
           <div className="flex gap-10 text-sm text-slate-400">
             <div className="space-y-2">
               <p className="font-semibold text-slate-600 text-xs uppercase tracking-wider mb-1">Work</p>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Research</a>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Open Source</a>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Lessons</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Research</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Open Source</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Lessons</a>
             </div>
             <div className="space-y-2">
               <p className="font-semibold text-slate-600 text-xs uppercase tracking-wider mb-1">Students</p>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Find a Mentor</a>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Access Tools</a>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Stipends</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Find a Mentor</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Access Tools</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Stipends</a>
             </div>
             <div className="space-y-2">
               <p className="font-semibold text-slate-600 text-xs uppercase tracking-wider mb-1">Org</p>
-              <a href="/" className="block hover:text-slate-700 transition-colors">About</a>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Donate</a>
-              <a href="/" className="block hover:text-slate-700 transition-colors">Contact</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">About</a>
+              <a href="#/donate" className="block hover:text-slate-700 transition-colors">Donate</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Contact</a>
             </div>
           </div>
         </div>
