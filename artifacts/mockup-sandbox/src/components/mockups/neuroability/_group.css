@@ -1,0 +1,38 @@
+/* Custom styling for NeuroAbility Landing Page */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-dmsans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Base custom colors */
+:root {
+  --na-teal: #0f4c5c;
+  --na-teal-light: #e0f2f1;
+  --na-indigo: #283593;
+  --na-amber: #ffecb3;
+  --na-amber-dark: #ff8f00;
+  --na-sand: #fdfbf7;
+}
+
+.text-na-teal { color: var(--na-teal); }
+.bg-na-teal { background-color: var(--na-teal); }
+.bg-na-teal-light { background-color: var(--na-teal-light); }
+
+.text-na-indigo { color: var(--na-indigo); }
+.bg-na-indigo { background-color: var(--na-indigo); }
+
+.bg-na-amber { background-color: var(--na-amber); }
+.text-na-amber-dark { color: var(--na-amber-dark); }
+
+.bg-na-sand { background-color: var(--na-sand); }
