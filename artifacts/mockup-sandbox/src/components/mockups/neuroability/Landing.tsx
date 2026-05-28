@@ -18,7 +18,7 @@ export function Landing() {
       {/* Nav */}
       <nav className="border-b border-slate-100 px-8 py-5 flex justify-between items-center sticky top-0 bg-white z-30">
         <div className="flex items-center gap-2.5">
-          <img src="/__mockup/images/neuroability-logo.png" alt="NeuroAbility logo" className="w-9 h-9 rounded-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/neuroability-logo.jpg`} alt="NeuroAbility logo" className="w-9 h-9 rounded-full object-cover" />
           <span className="font-['Playfair_Display',serif] text-lg font-semibold text-teal-800 tracking-tight">NeuroAbility Foundation</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-500">
@@ -80,7 +80,7 @@ export function Landing() {
           className="rounded-2xl overflow-hidden bg-slate-100 aspect-[16/7]"
         >
           <img
-            src="/__mockup/images/neuroability-hero.png"
+            src={`${import.meta.env.BASE_URL}images/neuroability-hero.jpg`}
             alt="Students learning together"
             className="w-full h-full object-cover"
           />
@@ -227,7 +227,7 @@ export function Landing() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
           <div>
             <div className="flex items-center gap-2.5">
-              <img src="/__mockup/images/neuroability-logo.png" alt="NeuroAbility logo" className="w-7 h-7 rounded-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}images/neuroability-logo.jpg`} alt="NeuroAbility logo" className="w-7 h-7 rounded-full object-cover" />
               <span className="font-['Playfair_Display',serif] font-semibold text-teal-800">NeuroAbility Foundation</span>
             </div>
             <p className="text-slate-400 text-xs mt-1">A registered 501(c)(3) nonprofit.</p>
