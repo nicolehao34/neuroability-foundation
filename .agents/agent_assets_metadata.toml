@@ -1,0 +1,25 @@
+uploads = []
+
+[[generated]]
+id = "4JfKk9OwgC2qQ4PELyxDE"
+uri = "file://artifacts/mockup-sandbox/public/images/neuroability-hero.png"
+type = "image"
+title = "Students studying warmly lit"
+
+[[generated]]
+id = "I33LRYOc97xwZ6rp1Uz8s"
+uri = "file://artifacts/mockup-sandbox/public/images/neuroability-support.png"
+type = "image"
+title = "Community support scene"
+
+[[generated]]
+id = "nKThqCF9KAsC44oOILOaI"
+uri = "file://artifacts/mockup-sandbox/public/images/neuroability-impact.png"
+type = "image"
+title = "Hopeful student smiling"
+
+[[outputs]]
+id = "kAomjcl1-rQnweNXKkJrR"
+uri = "file://screenshots/neuroability-landing.jpg"
+type = "image"
+title = "NeuroAbility Foundation — Landing Page (Hero)"
