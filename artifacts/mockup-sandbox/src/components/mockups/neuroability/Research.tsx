@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Microscope, BookOpen, Video, Brain, Accessibility, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Video, Brain, Accessibility, Users } from "lucide-react";
 
 const fade = {
   hidden: { opacity: 0, y: 16 },
