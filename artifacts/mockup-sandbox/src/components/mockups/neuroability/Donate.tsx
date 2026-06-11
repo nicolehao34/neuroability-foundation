@@ -103,7 +103,7 @@ export function Donate() {
                     </div>
                     <div className="flex items-center gap-1 text-slate-300 group-hover:text-teal-600 transition-colors">
                       {Array.from({ length: Math.min(tier.coffees, 5) }).map((_, i) => (
-                        <Coffee key={i} className="w-3.5 h-3.5" />
+                        <Coffee key={`${tier.label}-coffee-${i}`} className="w-3.5 h-3.5" />
                       ))}
                     </div>
                   </div>
