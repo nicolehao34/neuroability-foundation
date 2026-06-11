@@ -1,26 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Heart, Lock, Shield, ArrowRight } from "lucide-react";
+import { Heart, Coffee, Shield, ArrowRight, ExternalLink } from "lucide-react";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 16 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const amounts = [10, 25, 50, 100, "Custom"];
+const BMC_URL = "https://www.buymeacoffee.com/nicolehao7b";
 
-const tierDescriptions: Record<string, string> = {
-  "10": "Funds basic learning materials for one student.",
-  "25": "Covers one 1-on-1 mentoring session.",
-  "50": "Provides adaptive technology access for a week.",
-  "100": "Funds a month of premium tool access for a student.",
-  "Custom": "Every dollar makes a direct impact on our mission.",
-};
+const donationTiers = [
+  {
+    amount: "$5",
+    label: "A Coffee",
+    description: "Funds basic learning materials for one student.",
+    coffees: 1,
+  },
+  {
+    amount: "$15",
+    label: "A Study Session",
+    description: "Covers supplies for a group study workshop.",
+    coffees: 3,
+  },
+  {
+    amount: "$25",
+    label: "A Mentoring Hour",
+    description: "Covers one 1-on-1 mentoring session with an expert.",
+    coffees: 5,
+  },
+  {
+    amount: "$50",
+    label: "Tech Access",
+    description: "Provides adaptive technology access for a week.",
+    coffees: 10,
+  },
+];
 
 export function Donate() {
-  const [isMonthly, setIsMonthly] = useState(true);
-  const [selectedAmount, setSelectedAmount] = useState<number | string>(25);
-
   return (
     <div className="min-h-screen bg-white font-['DM_Sans',sans-serif] text-slate-900 selection:bg-teal-100 selection:text-teal-900">
       <nav className="border-b border-slate-100 px-8 py-5 flex justify-between items-center sticky top-0 bg-white z-30">
@@ -56,76 +72,73 @@ export function Donate() {
             variants={fadeIn} 
             className="border border-slate-100 rounded-2xl p-8 shadow-sm"
           >
-            {/* Toggle */}
-            <div className="flex bg-slate-50 p-1 rounded-full mb-8">
-              <button 
-                onClick={() => setIsMonthly(false)}
-                className={`flex-1 text-sm font-medium py-2.5 rounded-full transition-all ${!isMonthly ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
-              >
-                Give Once
-              </button>
-              <button 
-                onClick={() => setIsMonthly(true)}
-                className={`flex-1 text-sm font-medium py-2.5 rounded-full transition-all flex items-center justify-center gap-2 ${isMonthly ? 'bg-teal-700 text-white shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
-              >
-                <Heart className="w-4 h-4" /> Give Monthly
-              </button>
-            </div>
-
-            {/* Amounts */}
-            <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-4">
-              {amounts.map((amount) => (
-                <button
-                  key={amount}
-                  onClick={() => setSelectedAmount(amount)}
-                  className={`py-3 px-2 text-center rounded-xl font-medium transition-all border ${
-                    selectedAmount === amount 
-                    ? 'border-teal-700 bg-teal-50 text-teal-800' 
-                    : 'border-slate-200 text-slate-600 hover:border-teal-300 hover:bg-slate-50'
-                  }`}
-                >
-                  {typeof amount === 'number' ? `$${amount}` : amount}
-                </button>
-              ))}
-            </div>
-            
-            {/* Tier Description */}
-            <div className="bg-slate-50 rounded-xl p-4 mb-8 text-sm text-slate-600 border border-slate-100 flex items-start gap-3">
-              <div className="mt-0.5 text-teal-700"><ArrowRight className="w-4 h-4" /></div>
-              <p>{tierDescriptions[selectedAmount.toString()]}</p>
-            </div>
-
-            {/* Form */}
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1.5">First name</label>
-                  <input type="text" className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-700/20 focus:border-teal-700 transition-all placeholder:text-slate-400" placeholder="Jane" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1.5">Last name</label>
-                  <input type="text" className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-700/20 focus:border-teal-700 transition-all placeholder:text-slate-400" placeholder="Doe" />
-                </div>
+            {/* Buy Me a Coffee Header */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
+                <Coffee className="w-5 h-5 text-amber-600" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1.5">Email address</label>
-                <input type="email" className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-700/20 focus:border-teal-700 transition-all placeholder:text-slate-400" placeholder="jane@example.com" />
+                <h2 className="text-lg font-semibold text-slate-900">Buy us a coffee</h2>
+                <p className="text-sm text-slate-500">Every coffee fuels our mission</p>
               </div>
-              <div className="pt-2">
-                <label className="block text-sm font-medium text-slate-700 mb-1.5">Card details</label>
-                <div className="relative">
-                  <input type="text" className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-700/20 focus:border-teal-700 transition-all placeholder:text-slate-400 font-mono text-sm" placeholder="0000 0000 0000 0000" />
-                  <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
-                </div>
-              </div>
+            </div>
 
-              <button className="w-full py-3.5 mt-6 bg-teal-700 hover:bg-teal-800 text-white rounded-full font-medium transition-colors flex items-center justify-center gap-2">
-                Donate {typeof selectedAmount === 'number' ? `$${selectedAmount}` : ''} {isMonthly ? 'Monthly' : ''}
-              </button>
-            </form>
+            {/* Donation Tiers */}
+            <div className="space-y-3 mb-8">
+              {donationTiers.map((tier) => (
+                <a
+                  key={tier.label}
+                  href={BMC_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border border-slate-200 rounded-xl p-4 hover:border-teal-300 hover:bg-teal-50/30 transition-all group"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="text-lg font-semibold text-teal-700 min-w-[3.5rem]">{tier.amount}</div>
+                      <div>
+                        <div className="font-medium text-slate-900 group-hover:text-teal-800 transition-colors">{tier.label}</div>
+                        <div className="text-sm text-slate-500">{tier.description}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1 text-slate-300 group-hover:text-teal-600 transition-colors">
+                      {Array.from({ length: Math.min(tier.coffees, 5) }).map((_, i) => (
+                        <Coffee key={`${tier.label}-coffee-${i}`} className="w-3.5 h-3.5" />
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* Main CTA Button */}
+            <a
+              href={BMC_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3.5 bg-amber-400 hover:bg-amber-500 text-slate-900 rounded-full font-semibold transition-colors flex items-center justify-center gap-2 text-sm"
+            >
+              <Coffee className="w-4 h-4" />
+              Support us on Buy Me a Coffee
+              <ExternalLink className="w-3.5 h-3.5 ml-1" />
+            </a>
+
+            {/* Secondary link */}
+            <p className="text-center text-sm text-slate-500 mt-4">
+              You'll be redirected to our{" "}
+              <a
+                href={BMC_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-700 hover:text-teal-800 underline underline-offset-2"
+              >
+                Buy Me a Coffee page
+              </a>{" "}
+              to complete your donation securely.
+            </p>
 
             {/* Trust Signals */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-500">
+            <div className="mt-6 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-500">
               <div className="flex items-center gap-1.5">
                 <Shield className="w-3.5 h-3.5 text-teal-600" /> Secure transaction
               </div>
@@ -133,8 +146,7 @@ export function Donate() {
                 <Heart className="w-3.5 h-3.5 text-teal-600" /> 100% to program
               </div>
               <div className="flex items-center gap-1.5">
-                <div className="w-3.5 h-3.5 rounded-full border border-teal-600 flex items-center justify-center text-[8px] font-bold text-teal-600">$</div>
-                Tax-deductible
+                <Coffee className="w-3.5 h-3.5 text-teal-600" /> One-time or recurring
               </div>
             </div>
           </motion.div>
