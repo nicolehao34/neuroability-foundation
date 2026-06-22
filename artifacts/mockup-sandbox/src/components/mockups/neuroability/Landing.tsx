@@ -24,7 +24,7 @@ export function Landing() {
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-500">
           <a href="#work" className="hover:text-slate-900 transition-colors">Our Work</a>
           <a href="#resources" className="hover:text-slate-900 transition-colors">Resources</a>
-          <a href="#research" className="hover:text-slate-900 transition-colors">Research</a>
+          <a href="#/research" className="hover:text-slate-900 transition-colors">Research</a>
         </div>
         <div className="flex items-center gap-3">
           <a href="#get-involved" className="text-sm font-semibold text-teal-700 hover:text-teal-900 transition-colors px-5 py-2.5 rounded-full border border-teal-200 hover:border-teal-300">
@@ -232,7 +232,7 @@ export function Landing() {
           <div className="flex gap-10 text-sm text-slate-400">
             <div className="space-y-2">
               <p className="font-semibold text-slate-600 text-xs uppercase tracking-wider">Work</p>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Research</a>
+              <a href="#/research" className="block hover:text-slate-700 transition-colors">Research</a>
               <a href="#" className="block hover:text-slate-700 transition-colors">Open Source</a>
               <a href="#" className="block hover:text-slate-700 transition-colors">Lessons</a>
             </div>
