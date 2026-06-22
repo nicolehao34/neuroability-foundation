@@ -22,8 +22,8 @@ export function Landing() {
           <span className="font-['Playfair_Display',serif] text-lg font-semibold text-teal-800 tracking-tight">NeuroAbility Foundation</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-500">
-          <a href="#work" className="hover:text-slate-900 transition-colors">Our Work</a>
-          <a href="#resources" className="hover:text-slate-900 transition-colors">Resources</a>
+          <a href="#/work" className="hover:text-slate-900 transition-colors">Our Work</a>
+          <a href="#/resources" className="hover:text-slate-900 transition-colors">Resources</a>
           <a href="#/research" className="hover:text-slate-900 transition-colors">Research</a>
         </div>
         <div className="flex items-center gap-3">
@@ -233,20 +233,20 @@ export function Landing() {
             <div className="space-y-2">
               <p className="font-semibold text-slate-600 text-xs uppercase tracking-wider">Work</p>
               <a href="#/research" className="block hover:text-slate-700 transition-colors">Research</a>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Open Source</a>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Lessons</a>
+              <a href="#/work" className="block hover:text-slate-700 transition-colors">Open Source</a>
+              <a href="#/resources" className="block hover:text-slate-700 transition-colors">Guides</a>
             </div>
             <div className="space-y-2">
               <p className="font-semibold text-slate-600 text-xs uppercase tracking-wider">Students</p>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Find a Mentor</a>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Access Tools</a>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Stipends</a>
+              <a href="#/mentor" className="block hover:text-slate-700 transition-colors">Find a Mentor</a>
+              <a href="#/work" className="block hover:text-slate-700 transition-colors">Access Tools</a>
+              <a href="#/refer" className="block hover:text-slate-700 transition-colors">Refer a Student</a>
             </div>
             <div className="space-y-2">
               <p className="font-semibold text-slate-600 text-xs uppercase tracking-wider">Org</p>
-              <a href="#" className="block hover:text-slate-700 transition-colors">About</a>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Donate</a>
-              <a href="#" className="block hover:text-slate-700 transition-colors">Contact</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">About</a>
+              <a href="#/donate" className="block hover:text-slate-700 transition-colors">Donate</a>
+              <a href="#/" className="block hover:text-slate-700 transition-colors">Contact</a>
             </div>
           </div>
         </div>

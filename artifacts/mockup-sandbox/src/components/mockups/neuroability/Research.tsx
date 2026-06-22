@@ -27,8 +27,8 @@ export function Research() {
           </span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-500">
-          <a href="#/" className="hover:text-slate-900 transition-colors">Our Work</a>
-          <a href="#/" className="hover:text-slate-900 transition-colors">Resources</a>
+          <a href="#/work" className="hover:text-slate-900 transition-colors">Our Work</a>
+          <a href="#/resources" className="hover:text-slate-900 transition-colors">Resources</a>
           <a href="#/research" className="text-slate-900 font-medium transition-colors">Research</a>
         </div>
         <div className="flex items-center gap-3">
